@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+    <link rel="icon" type="images/x-icon" href="https://w7.pngwing.com/pngs/591/671/png-transparent-cloud-computing-logo-dedicated-hosting-service-clouds-blue-cloud-service.png" />
+
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: lightblue;
+                        /* Set background image */
+                        background-image: url('https://images3.alphacoders.com/794/79479.jpg');
+            /* Set background size and position */
+            background-size: cover;
+            background-position: center;
+        }
+        header {
+            background-color: #0166A9;
+            color: #fff;
+            padding: 10px 20px;
+            height: 25vh;
+            text-align: center;
+        }
+       
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #0166A9;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Smart Flood Detection System</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="0- index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="3 - about.html">About</a></li>
+        <li><a href="4 - contact-us.html">Contact Us</a></li>
+    </ul>
+</nav>
+
+<section>
+    <p>
+    <br>
+    <h2>     
+        <center>
+            Welcome to Smart Flood Prevention System!
+        </center>
+    </h2>
+        <br>
+    
+    <h2>User Data Form</h2>
+    <form action="/submit_data" method="POST">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        
+        <label for="label">Date:</label><br>
+        <input type="label" id="label" name="label"><br>
+
+        <label for="plevel">Precipitation level</label><br>
+        <input type="plevel" id="plevel" name="plevel"><br>
+
+        <label for="temp">Temperature</label><br>
+        <input type="temp" id="temp" name="temp"><br>
+        
+        <label for="message">Wind</label><br>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+
+
+</body>
+</html>
+
