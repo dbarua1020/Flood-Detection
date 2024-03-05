@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+    <link rel="icon" type="images/x-icon" href="https://w7.pngwing.com/pngs/591/671/png-transparent-cloud-computing-logo-dedicated-hosting-service-clouds-blue-cloud-service.png" />
     <style>
         /* Add your CSS styles here */
         body {
@@ -11,6 +13,11 @@
             margin: 0;
             padding: 0;
             background-color: lightblue;
+                        /* Set background image */
+                        background-image: url('https://images3.alphacoders.com/794/79479.jpg');
+            /* Set background size and position */
+            background-size: cover;
+            background-position: center;
         }
         header {
             background-color: #0166A9;
@@ -53,9 +60,9 @@
 <body>
 
 <header>
-    <h1>Smart Flood Detection System</h1>
+    <h1>WeatherWatch </h1>
+    <h2> Empowering Communities with Accurate Weather Intelligence</h2>
 </header>
-
 <nav>
     <ul>
         <li><a href="0- index.html">Home</a></li>
@@ -68,27 +75,86 @@
 <section>
     <p>
     <br>
-    <h2>     
-        <center>
-            Welcome to Services
-        </center>
-    </h2>
-        <br>
-    <h3>
-    <center>
-        Empowering Communities, Protecting Lives.
-    </center> 
-</h3>  
-    <br> 
-    We're dedicated to revolutionizing flood management using advanced technology. Our system provides accurate predictions and early warnings, enabling proactive measures to minimize flood risks. With remote control capabilities, optimizing infrastructure is effortless. Join us in creating flood-resilient communities. Explore our solutions and partner with us for a safer future.
-      
-        </p>
+     <h2> <u>Weather Predictor </u></h2>
+    <h3>User Data Form</h3>
+
+    <form method="post" action="{{ url_for('predict') }}">   <!---Connects with the backend-->
+<label for="date">Date:</label>
+        <input type="int" name="date" required> <br> <br>
+
+        <label for="precipitation">precipitation (in cms):</label>
+        <input type="number" name="precipitation" required> <br> <br>
+        
+        <label for="temp_max">Max Temp (in C):</label>
+        <input type="number" name="temp_max" required> <br> <br>
+        
+        <label for="temp_min">Min Temp (in C):</label>
+        <input type="number" name="temp_min" required> <br> <br>
+
+        <label for="wind">Wind (in m/s):</label>
+        <input type="number" name="wind" required> <br> <br>
+        
+        <button type="submit">Predict Weather</button> <br> <br>
+    </form>
+
+ <!--   {% if output %}
+            <p class="output">{{ output }}</p>
+        {% endif %} -->
+
 </section>
 
-<footer>
-    <p>&copy; 2024 My Website. All rights reserved.</p>
-</footer>
 
 </body>
+</html>   
+
+
+ <!- templates/index.html -->
+
+ <!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Weather Prediction.</h2>
+        <p>
+            App Description :- <br> 
+            This app is used for forecasting weather. Must be used by meteorologists.Date(YYMMDD)
+        </p>
+        <form method="post" action="{{ url_for('predict') }}">
+            <label for="date">Date:</label>
+            <input type="text" name="date" required>
+
+            <label for="precipitation">precipitation (in cms):</label>
+            <input type="number" name="precipitation" required>
+            
+            <label for="temp_max">Max Temp (in C):</label>
+            <input type="number" name="temp_max" required>
+            
+            <label for="temp_min">Min Temp (in C):</label>
+            <input type="number" name="temp_min" required>
+
+            <label for="wind">Wind (in C):</label>
+            <input type="number" name="wind" required>
+            
+            <button type="submit">Predict Weather</button>
+        </form>
+
+        {% if output %}
+            <p class="output">{{ output }}</p>
+        {% endif %}
+    </div>
+</body>
 </html>
+
+-->
+
+
+
+<!--python app.py >
 
