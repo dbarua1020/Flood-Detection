@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+    <link rel="icon" type="images/x-icon" href="https://w7.pngwing.com/pngs/591/671/png-transparent-cloud-computing-logo-dedicated-hosting-service-clouds-blue-cloud-service.png" />
+
     <style>
         /* Add your CSS styles here */
         body {
@@ -11,6 +14,11 @@
             margin: 0;
             padding: 0;
             background-color: lightblue;
+                        /* Set background image */
+                        background-image: url('https://images3.alphacoders.com/794/79479.jpg');
+            /* Set background size and position */
+            background-size: cover;
+            background-position: center;
         }
         header {
             background-color: #0166A9;
@@ -52,14 +60,15 @@
 </head>
 <body>
 
-<header>
-    <h1>Smart Flood Detection System</h1>
-</header>
+    <header>
+        <h1>WeatherWatch </h1>
+        <h2> Empowering Communities with Accurate Weather Intelligence</h2>
+    </header>
 
 <nav>
     <ul>
         <li><a href="0- index.html">Home</a></li>
-        <li><a href="2 - services.html">Services</a></li>
+        <li><a href="services.html">Services</a></li>
         <li><a href="3 - about.html">About</a></li>
         <li><a href="4 - contact-us.html">Contact Us</a></li>
     </ul>
@@ -68,21 +77,17 @@
 <section>
     <p>
     <br>
-    <h2>     
+    <h3> 
+    <br>
+    <br>
         <center>
-            Welcome to About
+            This website is created as part of a project for a hackathon event. It aims to provide a user-friendly and informative platform for accessing weather data and forecasts, empowering users with accurate insights to make informed decisions. Designed and developed by a dedicated team of participants, this website showcases innovative solutions to address real-world challenges in weather monitoring and forecasting. Through collaborative efforts and creative problem-solving, we strive to contribute to the advancement of meteorological technologies and enhance the resilience of communities worldwide.
         </center>
-    </h2>
+    </h3>
         <br>
-    <h3>
-    <center>
-        Empowering Communities, Protecting Lives.
-    </center> 
-</h3>  
+
     <br> 
-    We're dedicated to revolutionizing flood management using advanced technology. Our system provides accurate predictions and early warnings, enabling proactive measures to minimize flood risks. With remote control capabilities, optimizing infrastructure is effortless. Join us in creating flood-resilient communities. Explore our solutions and partner with us for a safer future.
-      
-        </p>
+     </p>
 </section>
 
 <footer>
